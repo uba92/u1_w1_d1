@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -7,14 +8,38 @@ public class Main {
 
 
 
-        Scanner scanner = new Scanner(System.in);
+        int result = prodotto(3, 5);
+        System.out.println(result);
 
-        System.out.print("Inserisci un numero intero:");
-        int x = scanner.nextInt();
 
-        System.out.print("Inserisci un altro numero intero:");
-        int y = scanner.nextInt();
 
-        System.out.print("Il prodotto tra " + x + " e " + y + " è: " + x*y);
+
+        String newStr = concatenazione("Ciao", 9);
+        System.out.println("la stringa concat è " + newStr);
+
+
+
+        String[] arrayOfStrings = insertStr(new String[]{"A", "B", "C", "D", "E"}, "BOH" );
+        System.out.println(Arrays.toString(arrayOfStrings));
+
     }
+    public static int prodotto (int x, int y) {return x * y;}
+
+    public static String concatenazione (String str, int x) {return str + x;}
+
+    public static String[] insertStr (String[] arrOfStr, String newStr) {
+        String[] newArray = new String[6];
+
+        for (int i=0; i< newArray.length; i++) {
+            if (i<3) {
+                newArray[i] = arrOfStr[i];
+            } else if (i == 3) {
+                newArray[i] = newStr;
+            } else {
+                newArray[i] = arrOfStr[i - 1];
+            }
+        }
+        return newArray;
+    }
+
 }
