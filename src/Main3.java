@@ -8,7 +8,7 @@ public class Main3 {
         int result = pariDispari(4);
         System.out.println(result);
 
-        double area = areaTriangolo(5, 6, 7);
+        double area = areaTriangolo(2.5, 3.0, 5);
         System.out.println("L'area del triangolo è: " + area);
     }
 
@@ -24,6 +24,12 @@ public class Main3 {
 
     public static double areaTriangolo (double a, double b, double c) {
         double semiperimeter = (a+b+c)/2;
+        if(a+b>c && a+c>b && b+c>a) {
         return Math.sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
+
+        } else {
+            System.out.println("Triangolo non valido");
+            return 0;
+        }
     }
 }
