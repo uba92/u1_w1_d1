@@ -8,17 +8,19 @@ public class Main {
 
 
 
+//        Esercizio1
         int result = prodotto(3, 5);
         System.out.println(result);
 
 
 
 
+//        esercizio2
         String newStr = concatenazione("Ciao", 9);
         System.out.println("la stringa concat è " + newStr);
 
 
-
+//esercizio3
         String[] arrayOfStrings = insertStr(new String[]{"A", "B", "C", "D", "E"}, "BOH" );
         System.out.println(Arrays.toString(arrayOfStrings));
 
